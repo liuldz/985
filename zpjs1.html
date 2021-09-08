@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            height: 100vh;
+            background-image:url("image/bj1.jpg");
+           
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .shu{
+            position: relative;
+            width: 500px;
+            height: 700px;
+            background-color: rgba(255, 255, 255, 0.774);
+            transform-style:  preserve-3d;
+            box-shadow:   300px 0px 30px  rgb(0, 0, 0,.6) inset;
+            transition: 5s cubic-bezier(.79,.34,.47,.92);
+        }
+        .shu::after{
+            content: '';
+            position: absolute;
+            height: 3px;
+            width: 303px;
+            left: 0px;
+            bottom: -3px;
+           /*  background-color: rgb(100, 96, 96); */
+           background-image: linear-gradient(to right,rgb(71, 68, 68),rgba(124, 120, 120, 0.3) );
+            border-bottom-left-radius: 5px;
+        }
+        .shu::before{
+            content: '';
+            position: absolute;
+            width: 3px;
+            height: 100%;
+            right: -3px;
+            top: 0px;
+            background-color: rgb(112, 108, 108);
+           background-image: linear-gradient(to top,rgb(114, 111, 111),rgba(90, 87, 87, 0.5) );;
+            border-top-right-radius: 3px;
+        }
+
+        .shu:hover{
+            box-shadow:   30px 0px 30px  rgb(0, 0, 0,.6) inset;
+            transform: rotate(-5deg);
+
+        }
+        .feng{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            z-index: 2;
+            background-image: url("image/fm1.jpg");
+            background-size: 100% ;
+            transform-origin: left;
+            transition: 3s cubic-bezier(.79,.34,.47,.92);
+            border-top-left-radius: 2px;
+            border-bottom-left-radius: 2px;
+           
+           
+        }
+        .shu:hover .feng{
+            transform: rotateY(-140deg);
+            
+        }
+       
+     
+        .wen{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            font-family: 'fangsong';
+            text-align: left;
+        }
+        p{
+			font-family:"楷体";
+        	color:black;
+			font-size: 22px;
+        }
+        .buttom{
+        	 height:100px;
+        	 width:300px;
+        	 border:none;
+        	 position:absolute;
+        	 bottom: 0px;
+        	 text-align:center;
+        	 
+        }
+        .buttom a{
+        	position:absolute;
+        	bottom:0px;
+        	text-decoration:none;
+        	font-size: 30px;
+        	color:white;
+        }
+    </style>
+</head>
+<body>
+    <div class="shu">
+        <div class="feng"></div>     
+        <div class="wen">
+            <h3 style="padding-top: 50px;padding-left: 40px;">《三体Ⅰ》</h3>
+            <p style=" padding-top: 30px; padding-left: 50px;padding-right: 20px;">
+           	《三体1：地球往事》讲的是在文化大革命如火如荼进行的同时，军方探寻外星文明的绝秘计划“红岸工程”取得了突破性进展。但在按下发射键的那一刻，历经劫难的叶文洁没有意识到，她彻底改变了人类的命运。地球文明向宇宙发出的第一声啼鸣，以太阳为中心，以光速向宇宙深处飞驰……
+四光年外，“三体文明”正苦苦挣扎——三颗无规则运行的太阳主导下的百余次毁灭与重生逼迫他们逃离母星。而恰在此时，他们接收到了地球发来的信息。
+在运用超技术锁死地球人的基础科学之后，三体人庞大的宇宙舰队开始向地球进发……人类的末日悄然来临。
+相对于其华美的语言，刘慈欣的作品中最打动人心的是华美的想象。科幻中常见的想象有宏大的、诡异的和逻辑严密的，但像这样充盈着美的想象却是弥足珍贵的。让我们翻开书，看看四光年外，“三体文明”是什么样子吧！
+            </p>
+        </div>
+    </div>
+    <div class="buttom">
+		<a href="zpjsml.html">返回目录</a>
+	</div>
+</body>
+</html>

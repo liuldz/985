@@ -1,0 +1,167 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>网页设计</title>
+
+<style type="text/css" > 
+	
+	*{ margin:0; padding:0; list-style:none;}
+ 
+#lanren #audio-btn{width: 44px;height: 44px; margin:10px auto;background-size: 100% 100%;}
+#lanren .on{background: url('image/11.png') no-repeat 0 0;-webkit-animation: rotating 1.2s linear infinite;animation: rotating 1.2s linear infinite;}
+#lanren .off{background: url('image/22.png') no-repeat 0 0;}
+@-webkit-keyframes rotating {
+from{
+-webkit-transform: rotate(0deg);
+-moz-transform: rotate(0deg);
+-ms-transform: rotate(0deg);
+-o-transform: rotate(0deg);
+    transform: rotate(0deg);
+}
+to{
+-webkit-transform: rotate(360deg);
+-moz-transform: rotate(360deg);
+-ms-transform: rotate(360deg);
+-o-transform: rotate(360deg);
+transform: rotate(360deg);
+}
+}
+@keyframes rotating {
+    from{
+        -webkit-transform: rotate(0deg);
+-moz-transform: rotate(0deg);
+-ms-transform: rotate(0deg);
+-o-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    to{
+        -webkit-transform: rotate(360deg);
+-moz-transform: rotate(360deg);
+-ms-transform: rotate(360deg);
+-o-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+	
+	body{
+		background:url("image/tup.jpg") no-repeat  0;
+	}
+	
+.title{
+   font-size: 60px;
+    font-family: 楷体;
+    text-align: center;
+    letter-spacing: 0.3em;
+    color:lightseagreen;
+    width: 500px;
+    height: 200px;
+    margin: auto;
+    padding-top: 50px;
+	}
+	.menu li:hover{
+            transform: scale(1.1,1.1);
+            transition: 2s;
+        }
+	.header{
+    position: absolute;
+    left:50%;
+    top:50%;
+    -webkit-transform: translate(-50%,-50%);
+    -moz-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    -o-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+}
+.menu{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    flex-direction: row;
+ }
+	
+.menu li{
+    width: 300px;
+    height: 200px;
+    text-align: center;
+    vertical-align: middle;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+	.menu li p{
+    font-family: 楷体;
+    font-size: 60px;
+    width: 70px;
+	color:coral;
+		background: url(image/csbj5.jpg)
+  
+    }
+	a{text-decoration: none}
+	</style>
+	<script src="/html_mre/layui/jquery-1.11.0.min.js"></script>
+</head>
+<body>
+
+ <div id="lanren">
+<div id="audio-btn" class="on" onclick="lanren.changeClass(this,'media')">
+<audio loop src="music/qyy.mp3" id="media" preload="preload"></audio>
+</div>
+</div>
+<script src="http://www.lanrenzhijia.com/ajaxjs/jquery.min.js"></script>
+<script>
+var lanren = {
+changeClass: function (target,id) {
+        var className = $(target).attr('class');
+        var ids = document.getElementById(id);
+        (className == 'on')
+            ? $(target).removeClass('on').addClass('off')
+            : $(target).removeClass('off').addClass('on');
+        (className == 'on')
+            ? ids.pause()
+            : ids.play();
+    },
+play:function(){
+document.getElementById('media').play();
+}
+}
+lanren.play();
+<!--代码部分end-->
+ 
+</script>
+
+<div class="title">三体</div>
+<div class="header">
+<ul class="menu">
+<li>
+<a href="zzjs.html">
+<p>作者介绍</p>
+</a>
+</li>	
+<li>
+<a href="zpjsml.html">
+<p>作品介绍</p>
+</a>
+</li>	
+<li>
+<a href="jzsx.html">
+<p>句子赏析</p>
+</a>
+</li>
+<li>
+<a href="xyx.html">
+<p>小游戏</p>
+</a>
+</li>	
+<li>
+<a href="dt.html">
+<p>小测试</p>
+</a>
+</li>			
+</ul>
+</div>
+
+
+
+</body>
+</html>

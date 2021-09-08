@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+	
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <link rel="stylesheet" type="text/css" href="fifteen.css">
+  <script src="fifteen.js" type="text/javascript"></script>
+  <title>拼图</title>
+	<style>
+		 body{
+            background:url("image/29.jpg")
+        }
+		.return {
+            width: 20%;
+            height: 15%;
+            position: relative;
+            left: 87%;
+            top: 2%;
+				
+        }
+		p{
+			color: aquamarine;
+			font-size: 30px;
+		}
+		</style>
+</head>
+
+<body>
+  <h1>拼图游戏</h1>
+  <div id="statu">
+    <img src="image/pt.jpg" id="smallPic"><br />
+    <label>时间: </label><span id="time">00:00</span>
+    <label>步数: </label><span id="step">0</span><br />
+    <select>
+      <option selected="selected" value="1">简单模式</option>
+      <option value="2">中等模式</option>
+      <option value="3">困难模式</option>
+    </select>
+  </div>
+  <div id="fifteen"></div>
+  <button id="restart">重新开始</button>
+ 
+</body>
+	<div class="return"><a href="mulu.html"><p>返回目录</p></a></div>
+</html>

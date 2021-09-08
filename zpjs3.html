@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            height: 100vh;
+            background:url(image/bj3.jpg);
+           width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .shu{
+            position: relative;
+            width: 500px;
+            height: 700px;
+            background-color: rgba(255, 255, 255, 0.774);
+            transform-style:  preserve-3d;
+            box-shadow:   300px 0px 30px  rgb(0, 0, 0,.6) inset;
+            transition: 5s cubic-bezier(.79,.34,.47,.92);
+        }
+        .shu::after{
+            content: '';
+            position: absolute;
+            height: 3px;
+            width: 303px;
+            left: 0px;
+            bottom: -3px;
+           /*  background-color: rgb(100, 96, 96); */
+           background-image: linear-gradient(to right,rgb(71, 68, 68),rgba(124, 120, 120, 0.3) );
+            border-bottom-left-radius: 5px;
+        }
+        .shu::before{
+            content: '';
+            position: absolute;
+            width: 3px;
+            height: 100%;
+            right: -3px;
+            top: 0px;
+            background-color: rgb(112, 108, 108);
+           background-image: linear-gradient(to top,rgb(114, 111, 111),rgba(90, 87, 87, 0.5) );;
+            border-top-right-radius: 3px;
+        }
+
+        .shu:hover{
+            box-shadow:   30px 0px 30px  rgb(0, 0, 0,.6) inset;
+            transform: rotate(-5deg);
+
+        }
+        .feng{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            z-index: 2;
+            background-image: url("image/1.jpg");
+            background-size: 100% ;
+            transform-origin: left;
+            transition: 3s cubic-bezier(.79,.34,.47,.92);
+            border-top-left-radius: 2px;
+            border-bottom-left-radius: 2px;
+           
+           
+        }
+        .shu:hover .feng{
+            transform: rotateY(-140deg);
+            
+        }
+       
+     
+        .wen{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            font-family: 'fangsong';
+            text-align: left;
+        }
+        p{
+			font-family:"楷体";
+        	color:black;
+			font-size: 22px;
+        }
+        .buttom{
+        	 height:100px;
+        	 width:300px;
+        	 border:none;
+        	 position:absolute;
+        	 bottom: 0px;
+        	 text-align:center;
+        	 
+        }
+        .buttom a{
+        	position:absolute;
+        	bottom:0px;
+        	text-decoration:none;
+        	font-size: 30px;
+        	color:white;
+        }
+    </style>
+</head>
+<body>
+    <div class="shu">
+        <div class="feng"></div>     
+        <div class="wen">
+            <h3 style="padding-top: 50px;padding-left: 40px;">《三体Ⅲ》</h3>
+            <p style=" padding-top: 20px; padding-left: 40px;padding-right: 15px;">
+           	与三体文明的战争使人类第一次看到了宇宙黑暗的真相，地球文明像一个恐惧的孩子，熄灭了寻友的篝火，在暗夜中发抖。自以为历经沧桑，其实刚刚蹒跚学步；自以为悟出了生存竞争的秘密，其实还远没有竞争的资格。
+
+使两个文明命悬一线的黑暗森林打击，不过是宇宙战场上一个微不足道的插曲。真正的星际战争没人见过，也不可能见到，因为战争的方式和武器已经远远超出人类的想象，目睹战场之日，即是灭亡之时。
+
+宇宙的田园时代已经远去，昙花一现的终极之美最终变成任何智慧体都无法做出的梦，变成游吟诗人缥缈的残歌；宇宙的物竞天择已到了最惨烈的时刻，在亿万光年暗无天日的战场上，深渊最底层的毁灭力量被唤醒，太空变成了死神广阔的披风。
+
+在云天明送的恒星的一颗行星上，程心遇到关一帆且探讨了宇宙降维的真相，然而超乎一切之上的力量要求宇宙归零重生，在黑域中穿越长达1800万年的时空……程心没有等到云天明到来，和关一帆在小宇宙中短暂居住后重新进入大宇宙生活。
+            </p>
+        </div>
+    </div>
+    <div class="buttom">
+		<a href=zpjsml.html>返回目录</a>
+	</div>
+</body>
+</html>
